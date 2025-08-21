@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import LogoLeaf from "../assets/Group 1000001874.svg";
 import IconArrow from "../assets/weui_arrow-filled (1).svg";
 import IconLocation from "../assets/mdi_location.svg";
-
+import MorselvImage from "../assets/Group 1000001876 copy.svg";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [menuMounted, setMenuMounted] = useState(false);
@@ -199,31 +199,32 @@ const Header = () => {
 
   useEffect(() => {
     const onClickOutside = (e) => {
-      if (!menuMounted) return;
-
-      const target = e.target;
-      if (
-        menuRef.current?.contains(target) ||
-        categoriesRef.current?.contains(target) ||
-        logoRef.current?.contains(target)
-      ) {
-        return;
+      // Check if mobile menu is open and close if click is outside
+      if (menuMounted && menuRef.current && !menuRef.current.contains(e.target) && !logoRef.current.contains(e.target)) {
+        closeMenu();
       }
-      closeMenu();
+
+      // Check if desktop categories dropdown is open and close if click is outside
+      if (showDesktopCategories && desktopDiscoverRef.current && !desktopDiscoverRef.current.contains(e.target)) {
+        setShowDesktopCategories(false);
+        setOpenNested([]);
+      }
     };
 
     document.addEventListener("mousedown", onClickOutside);
     return () => document.removeEventListener("mousedown", onClickOutside);
-  }, [menuMounted]);
+  }, [menuMounted, showDesktopCategories]);
 
   const menuTransitionStyle = {
-    transition: "transform 0.42s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.42s ease",
+    transition:
+      "transform 0.42s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.42s ease",
     transform: menuSlideIn ? "translateX(0)" : "translateX(-100%)",
     opacity: menuSlideIn ? 1 : 0,
   };
 
   const categoriesTransitionStyle = {
-    transition: "transform 0.42s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.42s ease",
+    transition:
+      "transform 0.42s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.42s ease",
     transform: categoriesSlideIn ? "translateX(0)" : "translateX(100%)",
     opacity: categoriesSlideIn ? 1 : 0,
   };
@@ -233,21 +234,30 @@ const Header = () => {
       {/* Desktop Header */}
       <div className="hidden md:flex items-center justify-between w-full h-[90px] px-8">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <img src={LogoLeaf} alt="Mor-Selv Logo" className="w-[63px] h-[29px]" />
-          <span className="text-[#FECD8C] font-montserrat text-[18px] font-medium">
-            Mor-Selv<sup className="text-xs">®</sup>
-          </span>
+        <div
+          className="flex items-center"
+          style={{ display: "flex", alignItems: "flex-start", gap: "9.594px" }}
+        >
+          <img
+            src={LogoLeaf}
+            alt="Mor-Selv Logo"
+            className="w-[63px] h-[29px]"
+          />
+          <img
+            src={MorselvImage}
+            alt="Mor-Selv Text"
+            className="h-[20px] w-auto"
+          />
         </div>
 
         {/* Navigation */}
-        <nav className="flex items-center gap-[60px] relative">
+        <nav className="flex items-center gap-[60px] md:gap-[30px] lg:gap-[60px] relative">
           <span className="text-white text-[16px] font-montserrat cursor-pointer hover:text-gray-300">
             Home
           </span>
 
           {/* Discover Services Dropdown */}
-          <div className="relative">
+          <div className="relative" ref={desktopDiscoverRef}>
             <div
               className="flex items-center gap-1 cursor-pointer select-none"
               onClick={() => {
@@ -348,7 +358,11 @@ const Header = () => {
 
         {/* Location */}
         <div className="flex items-center gap-2 cursor-pointer">
-          <img src={IconLocation} alt="Location Icon" className="w-[20px] h-[20px]" />
+          <img
+            src={IconLocation}
+            alt="Location Icon"
+            className="w-[20px] h-[20px]"
+          />
           <span className="text-white font-montserrat text-[16px] font-medium hover:text-gray-300">
             Gurugram, India
           </span>
@@ -358,16 +372,23 @@ const Header = () => {
       {/* Mobile Header */}
       <div className="md:hidden flex items-center justify-between w-full h-[70px] px-4">
         <div
-          className="flex items-center gap-2 cursor-pointer"
+          className="flex items-center"
           onClick={() => {
             openMenu();
           }}
           ref={logoRef}
+          style={{ display: "flex", alignItems: "flex-start", gap: "6.908px" }}
         >
-          <img src={LogoLeaf} alt="Mor-Selv Logo" className="w-[50px] h-[23px]" />
-          <span className="text-[#FECD8C] font-montserrat text-[16px] font-medium">
-            Mor-Selv<sup className="text-[10px]">®</sup>
-          </span>
+          <img
+            src={LogoLeaf}
+            alt="Mor-Selv Logo"
+            className="w-[50px] h-[23px]"
+          />
+          <img
+            src={MorselvImage}
+            alt="Mor-Selv Text"
+            className="h-[18px] w-auto"
+          />
         </div>
 
         <div className="flex items-center gap-3">
@@ -486,7 +507,11 @@ const Header = () => {
                   stroke="currentColor"
                   strokeWidth={2}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
                 <span className="opacity-0">hidden</span>
               </div>
@@ -506,7 +531,9 @@ const Header = () => {
                           alt="Arrow"
                           className="w-[12px] h-[12px] object-contain transition-transform duration-200"
                           style={{
-                            transform: mobileOpenNested.includes(index) ? "rotate(270deg)" : "rotate(90deg)",
+                            transform: mobileOpenNested.includes(index)
+                              ? "rotate(270deg)"
+                              : "rotate(90deg)",
                           }}
                         />
                       )}
@@ -515,7 +542,9 @@ const Header = () => {
                     {/* Subcategories */}
                     <div
                       className={`overflow-hidden transition-[max-height,opacity,padding] duration-300 ease-in-out px-4 ${
-                        mobileOpenNested.includes(index) ? "max-h-[300px] opacity-100 py-2" : "max-h-0 opacity-0 py-0"
+                        mobileOpenNested.includes(index)
+                          ? "max-h-[300px] opacity-100 py-2"
+                          : "max-h-0 opacity-0 py-0"
                       }`}
                     >
                       {category.subcategories.map((subcat) => (
