@@ -199,12 +199,12 @@ const Header = () => {
 
   useEffect(() => {
     const onClickOutside = (e) => {
-      // Check if mobile menu is open and close if click is outside
+      // Mobile menu will open and close if click is outside
       if (menuMounted && menuRef.current && !menuRef.current.contains(e.target) && !logoRef.current.contains(e.target)) {
         closeMenu();
       }
 
-      // Check if desktop categories dropdown is open and close if click is outside
+      // Desktop dropdown is open and close if click is outside
       if (showDesktopCategories && desktopDiscoverRef.current && !desktopDiscoverRef.current.contains(e.target)) {
         setShowDesktopCategories(false);
         setOpenNested([]);
