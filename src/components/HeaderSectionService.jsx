@@ -82,7 +82,7 @@ const HeaderSectionService = () => {
           {/* Content Section */}
           <div className="flex-grow ml-12">
             <h1 className="text-[#2D2D2D] font-montserrat uppercase font-bold text-[48px] leading-[67.2px] mb-6 text-left">
-              Beeyan | Classical Hatha Yoga Center
+              Beeyan | Classical Hatha Yoga Cnter
             </h1>
             <p><span className="text-[#4D4D4D] font-montserrat text-[16px] font-semibold underline decoration-solid underline-offset-4 mb-4">
                Fitness &amp; Body Movement 
@@ -92,11 +92,11 @@ const HeaderSectionService = () => {
                Yoga
              </span>
             </p>
-            <div className="flex items-center gap-2 mt-2 mb-8">
+            <div className="flex items-center gap-2 mt-[22.5px] mb-[22.5px]">
               <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
                 <path d="M17.5003 16.7708C16.5334 16.7708 15.6061 16.3867 14.9223 15.703C14.2386 15.0192 13.8545 14.0919 13.8545 13.125C13.8545 12.158 14.2386 11.2307 14.9223 10.547C15.6061 9.86324 16.5334 9.47913 17.5003 9.47913C18.4673 9.47913 19.3946 9.86324 20.0783 10.547C20.762 11.2307 21.1462 12.158 21.1462 13.125C21.1462 13.6037 21.0519 14.0778 20.8686 14.5202C20.6854 14.9625 20.4169 15.3644 20.0783 15.703C19.7398 16.0415 19.3379 16.3101 18.8955 16.4933C18.4532 16.6765 17.9791 16.7708 17.5003 16.7708ZM17.5003 2.91663C14.7929 2.91663 12.1964 3.99214 10.2819 5.90658C8.36751 7.82101 7.29199 10.4175 7.29199 13.125C7.29199 20.7812 17.5003 32.0833 17.5003 32.0833C17.5003 32.0833 27.7087 20.7812 27.7087 13.125C27.7087 10.4175 26.6331 7.82101 24.7187 5.90658C22.8043 3.99214 20.2077 2.91663 17.5003 2.91663Z" fill="#DE9636"/>
               </svg>
-              <p className="text-[#4D4D4D] font-montserrat text-base font-normal leading-[110%]">
+              <p className="text-[#4D4D4D] font-montserrat text-base font-normal leading-[110%] ">
                 Sector 45, Gurugram, Haryana 122018, India
               </p>
             </div>
@@ -152,7 +152,7 @@ const HeaderSectionService = () => {
               <span className="text-[#4D4D4D] font-montserrat text-sm font-semibold mb-3"> / </span>
               <span className="text-[#4D4D4D] font-montserrat text-sm font-semibold underline underline-offset-2 mb-3">Yoga</span>
             </p>
-            <div className="flex items-start gap-2 mb-4">
+            <div className="flex items-start gap-2 mt-[20px] mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
                 <path d="M17.5003 16.7708C16.5334 16.7708 15.6061 16.3867 14.9223 15.703C14.2386 15.0192 13.8545 14.0919 13.8545 13.125C13.8545 12.158 14.2386 11.2307 14.9223 10.547C15.6061 9.86324 16.5334 9.47913 17.5003 9.47913C18.4673 9.47913 19.3946 9.86324 20.0783 10.547C20.762 11.2307 21.1462 12.158 21.1462 13.125C21.1462 13.6037 21.0519 14.0778 20.8686 14.5202C20.6854 14.9625 20.4169 15.3644 20.0783 15.703C19.7398 16.0415 19.3379 16.3101 18.8955 16.4933C18.4532 16.6765 17.9791 16.7708 17.5003 16.7708ZM17.5003 2.91663C14.7929 2.91663 12.1964 3.99214 10.2819 5.90658C8.36751 7.82101 7.29199 10.4175 7.29199 13.125C7.29199 20.7812 17.5003 32.0833 17.5003 32.0833C17.5003 32.0833 27.7087 20.7812 27.7087 13.125C27.7087 10.4175 26.6331 7.82101 24.7187 5.90658C22.8043 3.99214 20.2077 2.91663 17.5003 2.91663Z" fill="#DE9636"/>
               </svg>
@@ -210,7 +210,7 @@ const HeaderSectionService = () => {
             <span className="text-[#4D4D4D] font-montserrat text-sm font-semibold mb-3"> / </span>
             <span className="text-[#4D4D4D] font-montserrat text-sm font-semibold underline underline-offset-2 mb-3">Yoga</span>
             </p>
-            <div className="flex items-start gap-2 mb-4">
+            <div className="flex items-start gap-2 mb-4 mt-[18px]">
               <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
                 <path d="M17.5003 16.7708C16.5334 16.7708 15.6061 16.3867 14.9223 15.703C14.2386 15.0192 13.8545 14.0919 13.8545 13.125C13.8545 12.158 14.2386 11.2307 14.9223 10.547C15.6061 9.86324 16.5334 9.47913 17.5003 9.47913C18.4673 9.47913 19.3946 9.86324 20.0783 10.547C20.762 11.2307 21.1462 12.158 21.1462 13.125C21.1462 13.6037 21.0519 14.0778 20.8686 14.5202C20.6854 14.9625 20.4169 15.3644 20.0783 15.703C19.7398 16.0415 19.3379 16.3101 18.8955 16.4933C18.4532 16.6765 17.9791 16.7708 17.5003 16.7708ZM17.5003 2.91663C14.7929 2.91663 12.1964 3.99214 10.2819 5.90658C8.36751 7.82101 7.29199 10.4175 7.29199 13.125C7.29199 20.7812 17.5003 32.0833 17.5003 32.0833C17.5003 32.0833 27.7087 20.7812 27.7087 13.125C27.7087 10.4175 26.6331 7.82101 24.7187 5.90658C22.8043 3.99214 20.2077 2.91663 17.5003 2.91663Z" fill="#DE9636"/>
               </svg>
@@ -268,7 +268,7 @@ const HeaderSectionService = () => {
           <span className="text-[#4D4D4D] font-montserrat text-[12px] font-semibold mb-3"> / </span>
            <span className="text-[#4D4D4D] font-montserrat text-[12px] font-semibold underline underline-offset-2 mb-3">Yoga</span>   
           </p>
-          <div className="flex items-start gap-2 mb-4">
+          <div className="flex items-start gap-2 mb-4 mt-[22.5px]">
             <svg xmlns="http://www.w3.org/2000/svg" width="16.8" height="16.8" viewBox="0 0 17 17" fill="none">
               <path d="M8.4 8.05002C7.93587 8.05002 7.49075 7.86565 7.16256 7.53746C6.83437 7.20927 6.65 6.76415 6.65 6.30002C6.65 5.8359 6.83437 5.39078 7.16256 5.06259C7.49075 4.7344 7.93587 4.55002 8.4 4.55002C8.86413 4.55002 9.30925 4.7344 9.63744 5.06259C9.96563 5.39078 10.15 5.8359 10.15 6.30002C10.15 6.52984 10.1047 6.7574 10.0168 6.96972C9.92884 7.18204 9.79994 7.37496 9.63744 7.53746C9.47494 7.69996 9.28202 7.82887 9.0697 7.91681C8.85738 8.00476 8.62981 8.05002 8.4 8.05002ZM8.4 1.40002C7.10044 1.40002 5.85411 1.91627 4.93518 2.8352C4.01625 3.75413 3.5 5.00046 3.5 6.30002C3.5 9.97503 8.4 15.4 8.4 15.4C8.4 15.4 13.3 9.97503 13.3 6.30002C13.3 5.00046 12.7838 3.75413 11.8648 2.8352C10.9459 1.91627 9.69956 1.40002 8.4 1.40002Z" fill="#D4AF37"/>
             </svg>
