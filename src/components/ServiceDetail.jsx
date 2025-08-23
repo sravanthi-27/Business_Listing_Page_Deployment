@@ -36,12 +36,12 @@ const ServiceDetail = () => {
             },
           ].map((service, idx) => (
             <div key={idx}>
-              <div className="flex justify-between items-start mb-4">
+              <div className="flex justify-between items-start gap-4">
                 <div className="max-w-4xl">
                   <h3 className="text-[#121212] font-montserrat text-[24px] font-bold uppercase">
                     {service.title}
                   </h3>
-                  <p className="text-[#121212] font-montserrat text-[16px] mt-2">
+                  <p className="text-[#121212] font-montserrat text-[16px] mt-[14px]">
                     {service.desc}
                   </p>
                 </div>
@@ -49,7 +49,7 @@ const ServiceDetail = () => {
                   BOOK NOW
                 </button>
               </div>
-              {idx < 3 && <div className="w-full h-px bg-white my-8 "></div>}
+              {idx < 3 && <div className="w-full h-px bg-white my-[38px]"></div>}
             </div>
           ))}
         </div>
@@ -94,7 +94,7 @@ const ServiceDetail = () => {
                   <h3 className="text-[#121212] font-montserrat text-[20px] font-bold uppercase">
                     {service.title}
                   </h3>
-                  <p className="text-[#121212] font-montserrat text-[14px] mt-2">
+                  <p className="text-[#121212] font-montserrat text-[14px] mt-[13px]">
                     {service.desc}
                   </p>
                 </div>
@@ -102,7 +102,7 @@ const ServiceDetail = () => {
                   BOOK NOW
                 </button>
               </div>
-              {idx < 3 && <div className="w-full h-px bg-white my-6"></div>}
+              {idx < 3 && <div className="w-full h-px bg-white my-[35px]"></div>}
             </div>
           ))}
         </div>
@@ -138,14 +138,14 @@ const ServiceDetail = () => {
                 <h3 className="text-[#121212] font-montserrat text-[18px] font-bold uppercase">
                   {service.title}
                 </h3>
-                <p className="text-[#121212] font-montserrat text-[14px]">
+                <p className="text-[#121212] font-montserrat text-[14px] mt-[12px]">
                   {service.desc}
                 </p>
                 <button className="bg-white text-black rounded-lg text-sm font-semibold px-8 py-2 w-max hover:bg-gray-100 transition">
                   BOOK NOW
                 </button>
               </div>
-              {idx < 3 && <div className="h-px bg-white"></div>}
+              {idx < 3 && <div className="my-[30px] h-px bg-white"></div>}
             </React.Fragment>
           ))}
         </div>
@@ -157,7 +157,7 @@ const ServiceDetail = () => {
         <h2 className="text-black font-inter font-bold text-[20px] mb-4">
           Main Offerings
         </h2>
-        <div className="bg-[#F3D0A1] rounded-lg p-4 space-y-4 w-full">
+        <div className="bg-[#F3D0A1] rounded-lg p-4 space-y-4 w-full h-[869px]">
           {[
             {
               title: "YOGASANAS WORKSHOP",
@@ -178,17 +178,17 @@ const ServiceDetail = () => {
           ].map((service, idx) => (
             <React.Fragment key={idx}>
               <div className="flex flex-col gap-2">
-                <h3 className="text-[#121212] font-montserrat text-[18px] font-bold uppercase">
+                <h3 className="text-[#121212] font-montserrat text-[18px] font-bold uppercase mt-[29px]">
                   {service.title}
                 </h3>
-                <p className="text-[#121212] font-montserrat text-[14px]">
+                <p className="text-[#121212] font-montserrat text-[14px] mt-2">
                   {service.desc}
                 </p>
-                <button className="bg-white text-black rounded-md text-sm font-semibold px-12 py-2 w-max hover:bg-gray-100 transition">
+                <button className="bg-white text-black rounded-md text-sm font-semibold px-12 py-2 w-max hover:bg-gray-100 transition mb-[29px]">
                   BOOK NOW
                 </button>
               </div>
-              {idx < 3 && <div className="h-px bg-white"></div>}
+              {idx < 3 && <div className="my-2 h-px bg-white"></div>}
             </React.Fragment>
           ))}
         </div>

@@ -6,10 +6,10 @@ const AboutBusinessSection = () => {
       {/* Desktop Version (xl and above) - Business description section */}
       <div className="hidden xl:block relative bg-white mx-auto mt-10" style={{ maxWidth: '1280px', width: '100%' }}>
         <div className="w-full mb-12">
-          <h2 className="text-black font-inter text-[32px] font-semibold mb-6">
+          <h2 className="text-[#000] font-inter text-[32px] font-semibold mb-6">
             About the business
           </h2>
-          <div className="text-[#585858] font-inter text-[16px] leading-normal max-w-7xl">
+          <div className="text-[#4D4D4D] font-inter text-[16px] leading-normal max-w-7xl">
             <p className="mb-4">
               बीयां (Beeyan) a SEED of yoga. 'Beeyan' is derived from an Awadhi
               word 'beeya' that means 'beej' in Hindi & seed in English.{" "}
@@ -41,10 +41,10 @@ const AboutBusinessSection = () => {
       {/* Laptop Version (lg) - For screens between 1024px and 1279px */}
       <div className="hidden lg:block xl:hidden relative bg-white mx-auto mt-8 w-full px-6">
         <div className="w-full mb-10">
-          <h2 className="text-black font-inter text-[28px] font-semibold mb-5">
+          <h2 className="text-[#000] font-inter text-[28px] font-semibold mb-5">
             About the business
           </h2>
-          <div className="text-[#585858] font-inter text-[15px] leading-normal">
+          <div className="text-[#4D4D4D] font-inter text-[15px] leading-normal">
             <p className="mb-4">
               बीयां (Beeyan) a SEED of yoga. 'Beeyan' is derived from an Awadhi
               word 'beeya' that means 'beej' in Hindi & seed in English.{" "}
@@ -69,10 +69,10 @@ const AboutBusinessSection = () => {
 
       {/* Tablet Version (md) - For screens between 768px and 1023px */}
       <div className="hidden md:block lg:hidden bg-white px-6 mt-6">
-        <h2 className="text-black font-inter text-[24px] font-semibold mt-6 mb-4">
+        <h2 className="text-[#000] font-inter text-[24px] font-semibold mt-6 mb-4">
           About the business
         </h2>
-        <div className="text-[#585858] font-inter text-[15px] leading-normal space-y-3 mb-6">
+        <div className="text-[#4D4D4D] font-inter text-[15px] leading-normal space-y-3 mb-6">
           <p>
             बीयां (Beeyan) a SEED of yoga. 'Beeyan' is derived from an Awadhi
             word 'beeya' that means 'beej' in Hindi & seed in English.
@@ -96,10 +96,10 @@ const AboutBusinessSection = () => {
 
       {/* Mobile Version (sm and below) - Compact business info */}
       <div className="block md:hidden bg-white px-4">
-        <h2 className="text-black font-inter text-[20px] font-semibold mt-6 mb-4">
+        <h2 className="text-[#000] font-inter text-[20px] font-semibold mt-6 mb-4">
           About the business
         </h2>
-        <div className="text-[#585858] font-inter text-[14px] leading-normal space-y-2 mb-6">
+        <div className="text-[#4D4D4D] font-inter text-[12px] leading-normal space-y-2 mb-6">
           <p>
             बीयां (Beeyan) a SEED of yoga. 'Beeyan' is derived from an Awadhi
             word 'beeya' that means 'beej' in Hindi &amp; seed in English. An
