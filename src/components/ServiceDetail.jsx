@@ -157,7 +157,7 @@ const ServiceDetail = () => {
         <h2 className="text-black font-inter font-bold text-[20px] mb-4">
           Main Offerings
         </h2>
-        <div className="bg-[#F3D0A1] rounded-lg p-4 space-y-4 w-full h-[869px]">
+        <div className="bg-[#F3D0A1] rounded-lg p-4 space-y-4 w-full min-h-[869px] h-auto">
           {[
             {
               title: "YOGASANAS WORKSHOP",
