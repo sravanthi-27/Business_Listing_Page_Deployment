@@ -4,7 +4,7 @@ const AboutBusinessSection = () => {
   return (
     <>
       {/* Desktop Version (xl and above) - Business description section */}
-      <div className="hidden xl:block relative bg-white mx-auto mt-10" style={{ maxWidth: '1280px', width: '100%' }}>
+      <div className="hidden xl:block relative bg-white mx-auto mt-10 md:px-5" style={{ maxWidth: '1280px', width: '100%' }}>
         <div className="w-full mb-12">
           <h2 className="text-[#000] font-inter text-[32px] font-semibold mb-6">
             About the business
@@ -35,7 +35,7 @@ const AboutBusinessSection = () => {
         <button className="bg-[#121212] text-white px-10 py-4 rounded-lg font-montserrat text-[20px] font-medium mb-8">
           Contact
         </button>
-        <div className="w-full h-px bg-[#A2A2A2] mt-[51.98px]"></div>
+        <div className="w-full h-px bg-[#A2A2A2] mt-[131px] mb-[128px]"></div>
       </div>
 
       {/* Laptop Version (lg) - For screens between 1024px and 1279px */}
