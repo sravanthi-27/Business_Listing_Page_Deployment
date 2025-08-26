@@ -2,8 +2,17 @@ import React, { useState } from "react";
 import image1 from "../assets/1a42454ed0b5f558b2ab7f2478aefbb4d03a89c7.jpg";
 import image2 from "../assets/LunaHeal.jpg";
 import image3 from "../assets/Bloom Haven.jpg";
+import ServicePopup from "./ServiceDetailPopup";
 
 const HeaderSectionService = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -26,6 +35,7 @@ const HeaderSectionService = () => {
 
   return (
     <div className="w-full pt-10 flex mx-auto flex-col md:px-5 ">
+    <ServicePopup isOpen={isPopupOpen} onClose={closePopup} />
       {/* Desktop Version (xl and above) */}
       <div className="hidden xl:block relative mt-8 mx-auto w-full pt-[50px]" style={{ maxWidth: '1280px' }}>
         <div className="flex w-full items-start justify-center pt-8">
@@ -100,7 +110,9 @@ const HeaderSectionService = () => {
                 Sector 45, Gurugram, Haryana 122018, India
               </p>
             </div>
-            <button className="inline-flex h-[60px] px-[44px] py-[20px] justify-center items-center gap-[10px] flex-shrink-0 rounded-[10px] bg-[#121212] text-[#FFF] font-montserrat text-[20px] font-medium leading-[110%] hover:bg-gray-800 transition">
+            <button 
+            onClick={openPopup}
+            className="inline-flex h-[60px] px-[44px] py-[20px] justify-center items-center gap-[10px] flex-shrink-0 rounded-[10px] bg-[#121212] text-[#FFF] font-montserrat text-[20px] font-medium leading-[110%] hover:bg-gray-800 transition">
               Contact
             </button>
           </div>
@@ -160,7 +172,9 @@ const HeaderSectionService = () => {
                 Sector 45, Gurugram, Haryana 122018, India
               </p>
             </div>
-            <button className="inline-flex px-6 py-3 justify-center items-center gap-2 rounded-[10px] bg-[#121212] text-white font-montserrat text-base font-medium leading-[110%] mb-6">
+            <button 
+              onClick={openPopup}
+              className="inline-flex px-6 py-3 justify-center items-center gap-2 rounded-[10px] bg-[#121212] text-white font-montserrat text-base font-medium leading-[110%] mb-6">
               Contact
             </button>
           </div>
@@ -218,7 +232,9 @@ const HeaderSectionService = () => {
                 Sector 45, Gurugram, Haryana 122018, India
               </p>
             </div>
-            <button className="inline-flex px-6 py-3 justify-center items-center gap-2 rounded-[10px] bg-[#121212] text-white font-montserrat text-base font-medium leading-[110%] mb-6">
+            <button 
+              onClick={openPopup}
+              className="inline-flex px-6 py-3 justify-center items-center gap-2 rounded-[10px] bg-[#121212] text-white font-montserrat text-base font-medium leading-[110%] mb-6">
               Contact
             </button>
           </div>
@@ -276,7 +292,9 @@ const HeaderSectionService = () => {
               Sector 45, Gurugram (Area)
             </p>
           </div>
-          <button className="inline-flex px-[30px] py-3 justify-center items-center gap-2 rounded-[10px] bg-[#121212] text-[#FFF] font-montserrat text-[14px] font-medium leading-[110%] mb-6">
+          <button 
+            onClick={openPopup}
+            className="inline-flex px-[30px] py-3 justify-center items-center gap-2 rounded-[10px] bg-[#121212] text-[#FFF] font-montserrat text-[14px] font-medium leading-[110%] mb-6">
             Contact
           </button>
           <h2 className="text-[#2D2D2D] font-montserrat font-semibold text-[16px] leading-[110%] font-variant-all-small-caps mb-1">Highlights</h2>

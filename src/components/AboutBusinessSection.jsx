@@ -1,9 +1,19 @@
-import React from "react";
+import React,{useState} from "react";
+import ServicePopup from "./ServiceDetailPopup";
 
 const AboutBusinessSection = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
   return (
     <>
       {/* Desktop Version (xl and above) - Business description section */}
+      <ServicePopup isOpen={isPopupOpen} onClose={closePopup} />
       <div className="hidden xl:block relative bg-white mx-auto mt-10 md:px-5" style={{ maxWidth: '1280px', width: '100%' }}>
         <div className="w-full mb-12">
           <h2 className="text-[#000] font-inter text-[32px] font-semibold mb-6">
@@ -32,7 +42,9 @@ const AboutBusinessSection = () => {
             </p>
           </div>
         </div>
-        <button className="bg-[#121212] text-white px-10 py-4 rounded-lg font-montserrat text-[20px] font-medium mb-8">
+        <button 
+        onClick={openPopup}
+        className="bg-[#121212] text-white px-10 py-4 rounded-lg font-montserrat text-[20px] font-medium mb-8">
           Contact
         </button>
         <div className="w-full h-px bg-[#A2A2A2] mt-[131px] mb-[128px]"></div>
@@ -61,7 +73,9 @@ const AboutBusinessSection = () => {
             </p>
           </div>
         </div>
-        <button className="bg-[#121212] text-white px-8 py-3 rounded-lg font-montserrat text-[18px] font-medium mb-8">
+        <button 
+        onClick={openPopup}
+        className="bg-[#121212] text-white px-8 py-3 rounded-lg font-montserrat text-[18px] font-medium mb-8">
           Contact
         </button>
         <div className="w-full h-px bg-[#A2A2A2] mt-10"></div>
@@ -88,7 +102,9 @@ const AboutBusinessSection = () => {
             individuals seeking balance amidst the challenges of modern living.
           </p>
         </div>
-        <button className="bg-[#121212] text-white px-8 py-3 rounded-lg font-montserrat text-[16px] font-medium mb-8">
+        <button 
+        onClick={openPopup}
+        className="bg-[#121212] text-white px-8 py-3 rounded-lg font-montserrat text-[16px] font-medium mb-8">
           Contact
         </button>
         <div className="w-full h-px bg-[#A2A2A2] mb-8"></div>
@@ -112,7 +128,9 @@ const AboutBusinessSection = () => {
             individuals seeking balance amidst the challenges of modern living.
           </p>
         </div>
-        <button className="bg-black text-white px-6 py-3 rounded-md font-montserrat text-[14px] font-bold mb-8">
+        <button 
+        onClick={openPopup}
+        className="bg-black text-white px-6 py-3 rounded-md font-montserrat text-[14px] font-bold mb-8">
           Contact
         </button>
         <div className="w-full h-px bg-[#A2A2A2] mb-8"></div>

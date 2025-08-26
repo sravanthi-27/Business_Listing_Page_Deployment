@@ -1,8 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
+import ServicePopup from "./ServiceDetailPopup";
 
 const ServiceDetail = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
   return (
     <div className="pt-10 flex mx-auto flex-col w-full px-3 sm:px-4 md:px-5">
+      <ServicePopup isOpen={isPopupOpen} onClose={closePopup} />
       {/* Desktop Version (xl and above) - Yoga services offerings */}
       <div className="hidden xl:block relative mt-8  mx-auto" style={{ maxWidth: '1280px', width: '100%' }}>
         <h2 className="text-[#2D2D2D] mt-30 font-montserrat font-semibold text-[32px] mb-6" style={{ lineHeight: '44.8px' }}>
@@ -45,7 +55,9 @@ const ServiceDetail = () => {
                     {service.desc}
                   </p>
                 </div>
-                <button className="bg-white text-black rounded-lg font-montserrat text-[16px] font-semibold py-4 mt-6 w-[200px] flex-shrink-0 hover:bg-gray-100 transition">
+                <button 
+                onClick={openPopup}
+                className="bg-white text-black rounded-lg font-montserrat text-[16px] font-semibold py-4 mt-6 w-[200px] flex-shrink-0 hover:bg-gray-100 transition">
                   BOOK NOW
                 </button>
               </div>
@@ -98,7 +110,9 @@ const ServiceDetail = () => {
                     {service.desc}
                   </p>
                 </div>
-                <button className="bg-white text-black rounded-lg font-montserrat text-[14px] font-semibold py-3 px-6 mt-6 flex-shrink-0 hover:bg-gray-100 transition whitespace-nowrap">
+                <button 
+                onClick={openPopup}
+                className="bg-white text-black rounded-lg font-montserrat text-[14px] font-semibold py-3 px-6 mt-6 flex-shrink-0 hover:bg-gray-100 transition whitespace-nowrap">
                   BOOK NOW
                 </button>
               </div>
@@ -141,7 +155,9 @@ const ServiceDetail = () => {
                 <p className="text-[#121212] font-montserrat text-[14px] mt-[12px]">
                   {service.desc}
                 </p>
-                <button className="bg-white text-black rounded-lg text-sm font-semibold px-8 py-2 w-max hover:bg-gray-100 transition">
+                <button 
+                onClick={openPopup}
+                className="bg-white text-black rounded-lg text-sm font-semibold px-8 py-2 w-max hover:bg-gray-100 transition">
                   BOOK NOW
                 </button>
               </div>
@@ -184,7 +200,9 @@ const ServiceDetail = () => {
                 <p className="text-[#121212] font-montserrat text-[14px] mt-2">
                   {service.desc}
                 </p>
-                <button className="bg-white text-black rounded-md text-sm font-semibold px-12 py-2 w-max hover:bg-gray-100 transition mb-[29px]">
+                <button 
+                onClick={openPopup}
+                className="bg-white text-black rounded-md text-sm font-semibold px-12 py-2 w-max hover:bg-gray-100 transition mb-[29px]">
                   BOOK NOW
                 </button>
               </div>
